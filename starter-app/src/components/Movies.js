@@ -1,26 +1,25 @@
 import React from 'react';
 import './Movies.css';
-import _
+import { Card } from 'react-bootstrap';
 
-function Movies(props) { 
-    return(
+function Movies(props) {
+    // iterate thru items and create a card for each
+    return (
         <div>
             {props.movies.map(movie => {
                 return (
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                        </Card>
-                )
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={movie.Poster} />
+                    <Card.Body>
+                        <Card.Title>{movie.Title}</Card.Title>
+                        <Card.Text>
+                            {movie.Year}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>)  
             })}
         </div>
+        
     )
 }
 
