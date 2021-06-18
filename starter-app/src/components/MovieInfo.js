@@ -4,14 +4,14 @@ import Movies from './Movies';
 
 function MovieInfo() { 
     const [query, setQuery] = useState('');
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState([]); // captures array of objects returned from API fetch
     const [showMovies, setShowMovies] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
         async function fetchMyAPI() {
             const searchParam = encodeURIComponent(query); // URI encode search using escape chars (%)
-            const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${searchParam}&r=json`; // Want json response
+            const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${searchParam}&type=movie&r=json`; // Want json response
             console.log(apiUrl);
             let response = await fetch(apiUrl); // call API using fetch
             response = await response.json(); // transform into json
