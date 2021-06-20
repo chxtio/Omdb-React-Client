@@ -11,11 +11,32 @@ function MovieInfo() {
         e.preventDefault();
         async function fetchMyAPI() {
             const searchParam = encodeURIComponent(query); // URI encode search using escape chars (%)
-            const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${searchParam}&type=movie&r=json`; // Want json response
+            const apiUrl = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${searchParam}&type=movie&r=json`; // tt0206512
             console.log(apiUrl);
             let response = await fetch(apiUrl); // call API using fetch
             response = await response.json(); // transform into json
+
+            console.log('initial search response: ');
+            console.log(response);
+
+            console.log("for loop: ");
+            for (let i in response.Search) {
+                // console.log(movie.Title);
+                console.log(response.Search[i].Title);
+                const apiUrl2 = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&t=${response.Search[i].Title}&type=movie&r=json`;
+                // console.log(apiUrl2);
+
+                let response2 = await fetch(apiUrl2); // call API using fetch
+                response2 = await response2.json(); // transform into json
+                console.log(response2);
+
+                // Update the array with additional details for each movie
+                response.Search[i] = response2;
+            }
+
+            console.log('Updated search response: ');
             console.log(response.Search);
+
             setMovies(response.Search);
         }
         fetchMyAPI();
