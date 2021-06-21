@@ -84,12 +84,14 @@ function MovieInfo() {
                 {showMovies ? <Movies movies={movies}></Movies> : <></>}
             
             <div>
-                <p>Showing <b>{totalResults} results</b> over {numPages} pages | Page: <b>{page}</b></p>
-                {/* <p><b>Page:</b> {page}</p> */}
+                {
+                    (numPages !== 0) &&
+                    <p>Showing <b>{totalResults} results</b> over {numPages} pages | Page: <b>{page}</b></p>
+                }
             </div>
             <div className="navigationBtns">
                 {
-                    (page !== 1) &&
+                    (page !== 1 && numPages !== 0) &&
                     <button className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Previous Page</button> /* &lt; */
                     // &&
                 }
