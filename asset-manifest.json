@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/omdbReact2/static/css/main.33a25ddb.chunk.css",
-    "main.js": "/omdbReact2/static/js/main.8c8cd9e8.chunk.js",
-    "main.js.map": "/omdbReact2/static/js/main.8c8cd9e8.chunk.js.map",
+    "main.css": "/omdbReact2/static/css/main.da862332.chunk.css",
+    "main.js": "/omdbReact2/static/js/main.c6de1fb8.chunk.js",
+    "main.js.map": "/omdbReact2/static/js/main.c6de1fb8.chunk.js.map",
     "runtime-main.js": "/omdbReact2/static/js/runtime-main.b24b7e44.js",
     "runtime-main.js.map": "/omdbReact2/static/js/runtime-main.b24b7e44.js.map",
     "static/js/2.ba613933.chunk.js": "/omdbReact2/static/js/2.ba613933.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.2c490568.chunk.js": "/omdbReact2/static/js/3.2c490568.chunk.js",
     "static/js/3.2c490568.chunk.js.map": "/omdbReact2/static/js/3.2c490568.chunk.js.map",
     "index.html": "/omdbReact2/index.html",
-    "static/css/main.33a25ddb.chunk.css.map": "/omdbReact2/static/css/main.33a25ddb.chunk.css.map",
+    "static/css/main.da862332.chunk.css.map": "/omdbReact2/static/css/main.da862332.chunk.css.map",
     "static/js/2.ba613933.chunk.js.LICENSE.txt": "/omdbReact2/static/js/2.ba613933.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b24b7e44.js",
     "static/js/2.ba613933.chunk.js",
-    "static/css/main.33a25ddb.chunk.css",
-    "static/js/main.8c8cd9e8.chunk.js"
+    "static/css/main.da862332.chunk.css",
+    "static/js/main.c6de1fb8.chunk.js"
   ]
 }
