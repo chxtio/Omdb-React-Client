@@ -3,17 +3,16 @@ import './Movies.css';
 import { Card } from 'react-bootstrap';
 
 function Movies(props) {
-    
+
     return (
         <div>
             {props.movies.map(movie => {
-                console.log("debugging Movies.js");
 
                 return (
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={movie.Poster} />
                     <Card.Body>
-                        <Card.Title>{movie.Title}</Card.Title>
+                        <Card.Title><h1><b>{movie.Title}</b></h1></Card.Title>
                         <Card.Text>
                             Release Date: {movie.Released}
                         </Card.Text>
@@ -21,10 +20,10 @@ function Movies(props) {
                             Runtime: {movie.Runtime}
                         </Card.Text>
                         <Card.Text>
-                            Rating: {movie.imdbRating} / 10
+                            <h4><b>Rating: {movie.imdbRating} / 10 </b></h4>
                         </Card.Text>
                         <Card.Text>
-                            Plot: {movie.Plot}
+                            {movie.Plot}
                         </Card.Text>
                         <Card.Text>
                             Director: {movie.Director}
@@ -32,10 +31,6 @@ function Movies(props) {
                         <Card.Text>
                             Genre: {movie.Genre}
                         </Card.Text>
-                        <Card.Text>
-                            Type: {movie.Type}
-                        </Card.Text>
-
                     </Card.Body>
                 </Card>)  
             })}
