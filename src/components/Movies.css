@@ -3,10 +3,27 @@
     
 }
 
-/* .movieBody {
-    
-} */
+.movieContainer {
+    border-style: ridge;
+    border-width: 5px;
+    border-radius: 10px;
+    min-height: 420px;
+    margin: 20px auto 45px; 
+    box-shadow: 10px 5px 5px rgb(12, 12, 121);
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: row; */
+  }
 
+  .movieImage {
+    box-shadow: 10px 5px 5px black;
+  }
+
+  .movieBody {
+      overflow-wrap: break-word;
+      /* color: blue; */
+  }
+  
 table {
     border-collapse: collapse;
 }  

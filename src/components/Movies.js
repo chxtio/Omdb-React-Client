@@ -7,12 +7,15 @@ function Movies(props) {
     return (
         <div>
             {props.movies.map(movie => {
-
                 return (
+                    
+                    <Card style={{ width: '45rem' }}>
                     <div className="movieContainer">
-                    <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={movie.Poster} />
-                        <Card.Body className="movieBody">
+                        <div className="movieImage" >
+                        <Card.Img variant="top" src={movie.Poster} />
+                        </div>
+                        <div className="movieBody" style={{ width: '23rem' }}>
+                        <Card.Body >
                             <Card.Title><h1><b>{movie.Title}</b></h1></Card.Title>
                             <Card.Text>
                                 Release Date: {movie.Released}
@@ -33,9 +36,10 @@ function Movies(props) {
                                 Genre: {movie.Genre}
                             </Card.Text>
                         </Card.Body>
-
-                    </Card>
+                        </div>
                     </div>
+                    </Card>
+                   
                 )  
             })}
         </div>
