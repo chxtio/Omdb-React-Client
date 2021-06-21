@@ -34,7 +34,7 @@
     width: 100%;
   }
 
-  .genreTags span {
+  .genreTags span, .movieType {
       border: 1px solid black;
       border-radius: 4px;
       padding: 0 10px;
@@ -42,10 +42,14 @@
       display:  inline-block;
   }
 
-  .movieRelease {
-      /* text-align: right; */
-      /* margin-top: -5px; */
-
+  .movieType {
+    border: 1px solid magenta;
+    color: magenta;
+    /* background-color: pink; */
+    /* font-weight: bold; */
+    box-shadow: 0px 0px 2px magenta;
+    
+    
   }
   
 table {
