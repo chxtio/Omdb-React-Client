@@ -7,7 +7,7 @@ function MovieInfo() {
     const [movies, setMovies] = useState([]); // captures array of objects returned from API fetch
     const [showMovies, setShowMovies] = useState(false);
     const [totalResults, setTotalResults] = useState(0);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(2);
     const [numPages, setNumPages] = useState(0);
 
 
@@ -90,12 +90,12 @@ function MovieInfo() {
             <div className="navigationBtns">
                 {
                     (page !== 1) &&
-                    <button className="prevBtn" onClick= {() => setPage(page-1)}> &lt; Previous Page</button> 
+                    <button className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Previous Page</button> /* &lt; */
                     // &&
                 }
                 {
                     (page < numPages) &&
-                    <button className="nextBtn" onClick= {() => setPage(page+1)}> Next Page &gt;</button>
+                    <button className="nextBtn" onClick= {() => setPage(page+1)}> Next Page &gt; </button> /*<i class="material-icons">arrow_forward_ios</i> */
                 }
             </div>
         </div>

@@ -8,6 +8,18 @@ body {
     font-family: Lato;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: lightsteelblue; */
+}
+
+.movieContainer {
+  border-style: ridge;
+  border-width: 5px;
+  border-radius: 10px;
+  min-height: 420px;
+  margin: 20px auto 45px; 
+  box-shadow: 10px 5px 5px rgb(12, 12, 121);
+  display: flex;
+  /* flex-direction: row; */
 }
 
 code {
@@ -34,10 +46,26 @@ code {
   text-transform: uppercase!important;
 }
 
+
 .prevBtn {
   margin-right: 70px;
 }
 
 .nextBtn {
   margin-left: 70px;
+}
+
+.prevBtn:hover {
+  background-color: white;
+  color:#e17b77;
+}
+
+.nextBtn:hover {
+  background-color: white;
+  color:#e17b77;
+}
+
+button:hover {
+  background-color: white;
+  color:green;
 }

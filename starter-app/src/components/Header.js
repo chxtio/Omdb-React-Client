@@ -4,7 +4,8 @@ import './Header.css';
 function Header(props) { // pass in props from parent component
     return(
         <div className="header">
-            {props.title}
+            <i class="material-icons">theater_comedy</i> {props.title} <i class="material-icons">theater_comedy</i>
+            
         </div>
     )
 }

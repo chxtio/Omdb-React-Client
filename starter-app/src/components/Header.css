@@ -2,9 +2,14 @@
     background-color: #013D5B;
     min-height: 10vh;
     display: flex; 
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     font-size: 36px;
     color: white;
+}
+
+.material-icons {
+    margin-right: 10px;
+    margin-left: 10px;
 }
