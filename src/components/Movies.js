@@ -17,9 +17,18 @@ function Movies(props) {
                         <div className="movieBody" style={{ width: '23rem' }}>
                         <Card.Body >
                             <Card.Title><h1><b>{movie.Title}</b></h1></Card.Title>
+                            <div className="movieRelease">
                             <Card.Text>
+                                {/* <b>Release Date: {movie.Released}</b> */}
                                 Release Date: {movie.Released}
                             </Card.Text>
+                            </div>
+                            <div className="genreTags">
+                                <Card.Text>
+                                    {movie.Genre && movie.Genre.split(', ').map(g => <span>{g}</span>)}
+                                </Card.Text>
+                            </div>
+                            
                             <Card.Text>
                                 Runtime: {movie.Runtime}
                             </Card.Text>
@@ -32,9 +41,7 @@ function Movies(props) {
                             <Card.Text>
                                 Director: {movie.Director}
                             </Card.Text>
-                            <Card.Text>
-                                Genre: {movie.Genre}
-                            </Card.Text>
+                            
                         </Card.Body>
                         </div>
                     </div>
