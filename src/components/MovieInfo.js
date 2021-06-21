@@ -12,8 +12,6 @@ function MovieInfo() {
 
 
     function handleSubmit(e) {
-        // let currPage = 2;
-        // setPage(page+1);
         e.preventDefault();
         
         console.log("Displaying page: ");
@@ -32,8 +30,8 @@ function MovieInfo() {
             console.log("for loop: ");
             for (let i in response.Search) {
                 // console.log(movie.Title);
-                // console.log(response.Search[i].Title);
-                const apiUrl2 = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&t=${response.Search[i].Title}&type=movie&r=json&page=${page}`;
+                // console.log(response.Search[i].imdbID);
+                const apiUrl2 = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${response.Search[i].imdbID}&type=movie&r=json&page=${page}`;
                 // console.log(apiUrl2);
 
                 let response2 = await fetch(apiUrl2); // call API using fetch
@@ -56,12 +54,6 @@ function MovieInfo() {
             // setTotalResults(response.totalResults, console.log('Total results: ' + totalResults));
         }
         fetchMyAPI();
-        
-        // useEffect(() => {
-        //     if(query !== "") {
-        //         fetchMyAPI();
-        //     }
-        // }, [page]);
         
         // See items w/ title and movie state
         setShowMovies(true);
