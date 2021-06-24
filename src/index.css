@@ -18,14 +18,14 @@ code {
 }
 
 .navigationBtns {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: ; */
   margin: 2rem 0 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 .prevBtn, .nextBtn {
   background-color: #e17b77;
+  /* background-color: rgb(105, 8, 13); */
   border: 2px solid #e17b77;
   color: #fff;
   cursor: pointer;

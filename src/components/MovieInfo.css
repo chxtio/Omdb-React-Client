@@ -27,6 +27,7 @@ form {
     font-size: 16px;
 }
 
+
 label {
     font-size: 20px;
 }
@@ -40,6 +41,7 @@ label {
 }
 
 .api-info {
-    margin: 10px auto;
+    margin: 30px auto;
     color: green;
 }
+

@@ -15,9 +15,8 @@ function MovieInfo() {
         setPage(1);        
         // console.log("Displaying page: ");
         // console.log(page);
-
-        // See items w/ title and movie state
-        fetchMyAPI();
+        
+        fetchMyAPI(); // See items w/ title and movie state
         setShowMovies(true);
         // setQuery("");
     }
@@ -29,20 +28,6 @@ function MovieInfo() {
         let response = await fetch(apiUrl); // call API using fetch
         response = await response.json(); // transform into json
 
-        console.log("for loop: ");
-        for (let i in response.Search) {
-            // console.log(response.Search[i].imdbID);
-            const apiUrl2 = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${response.Search[i].imdbID}&type=movie&r=json&page=${page}`;
-            // console.log(apiUrl2);
-            let response2 = await fetch(apiUrl2); // call API using fetch
-            response2 = await response2.json(); // transform into json
-            console.log(response2);
-            // Update the array with additional details for each movie
-            response.Search[i] = response2;
-        }
-
-        console.log('Updated search response: ');
-        console.log(response.Search);
         setMovies(response.Search);
 
         setTotalResults(response.totalResults);
@@ -54,11 +39,8 @@ function MovieInfo() {
 
     useEffect(() => {
         if (query !== "") {
-            fetchMyAPI();
-            
-        }
-        // window.scrollTo(0, 0);
-        
+            fetchMyAPI(); 
+        }        
     }, [page]);
 
     return(
@@ -67,18 +49,38 @@ function MovieInfo() {
             <div className="api-info">
                 Data provided for free by the <a href="http://www.omdbapi.com/">OMDb</a> API.
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <label htmlFor="queryInput"></label>
                 <input
                     id="queryInput"
+                    placeholder="Enter movie title"
                     value={query}
                     type="text"
                     onChange={e => setQuery(e.target.value)}
                     />
                 <button className="search">Search</button>
             </form>
+            <div className="navigationBtns">
+                {
+                    (page !== 1 && numPages !== 0) &&
+                    <button className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Previous Page</button> /* &lt; */
+                }
+                                {
+                    (numPages !== 0) &&
+                    <p>Showing <b>{totalResults} results</b> over {numPages} pages | Page: <b>{page}</b></p>
+                }
+                {
+                    (page < numPages) &&
+                    <button className="nextBtn" onClick= {() => setPage(page+1)}> Next Page &gt; </button> /*<i class="material-icons">arrow_forward_ios</i> */
+                }
+            </div>
+
+
+
                 {showMovies ? <Movies movies={movies}></Movies> : <></>}
             
+
+
             <div>
                 {
                     (numPages !== 0) &&
