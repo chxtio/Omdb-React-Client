@@ -5,47 +5,20 @@ import { Card } from 'react-bootstrap';
 function Movies(props) {
 
     return (
-        <div>
+        <div className = "moviesGrid">
             {props.movies.map(movie => {
                 return (
                     
-                    <Card style={{ width: '45rem' }}>
+                    <Card style={{ width: '19.8rem' }}> 
+                    {/* <Card style={{ width: '45rem' }}> */}
                     <div className="movieContainer">
-                        <div className="movieImage" >
-                        <Card.Img variant="top" src={movie.Poster} />
-                        </div>
-                        <div className="movieBody" style={{ width: '23rem' }}>
-                        <Card.Body >
-                            <Card.Title><h1><b>{movie.Title}</b></h1></Card.Title>
-                            <Card.Text className="movieType">
-                                {movie.Type}
-                            </Card.Text>
-                            <div className="movieRelease">
-                            <Card.Text>
-                                {/* <b>Release Date: {movie.Released}</b> */}
-                                Release Date: {movie.Released}
-                            </Card.Text>
-                            </div>
-                            <div className="genreTags">
-                                <Card.Text>
-                                    {movie.Genre && movie.Genre.split(', ').map(g => <span>{g}</span>)}
-                                </Card.Text>
-                            </div>
-                            
-                            <Card.Text>
-                                Runtime: {movie.Runtime}
-                            </Card.Text>
-                            <Card.Text>
-                                <h4><b>Rating: {movie.imdbRating} / 10 </b></h4>
-                            </Card.Text>
-                            <Card.Text>
-                                {movie.Plot}
-                            </Card.Text>
-                            <Card.Text>
-                                Director: {movie.Director}
-                            </Card.Text>
+                        {/* <div className="movieImage" > */}
+                        <Card.Img variant="top" src={movie.Poster} className="movieImage" />
+                        {/* </div> */}
+                        <Card.Body className="movieBody">
+                            <Card.Title><h2><b>{movie.Title}</b></h2></Card.Title>
+                            <Card.Text><h2>{movie.Year}</h2></Card.Text>
                         </Card.Body>
-                        </div>
                     </div>
                     </Card>
                    

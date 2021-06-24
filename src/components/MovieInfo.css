@@ -38,3 +38,8 @@ label {
     padding: 10px;
     margin: 10px;
 }
+
+.api-info {
+    margin: 10px auto;
+    color: green;
+}

@@ -1,5 +1,4 @@
 import React, {useState, useEffect } from 'react';
-import './MovieInfo.css';
 import Movies from './Movies';
 
 function MovieInfo() { 
@@ -13,7 +12,6 @@ function MovieInfo() {
 
     function handleSubmit(e) {
         e.preventDefault();
-
         setPage(1);        
         // console.log("Displaying page: ");
         // console.log(page);
@@ -57,15 +55,17 @@ function MovieInfo() {
     useEffect(() => {
         if (query !== "") {
             fetchMyAPI();
+            
         }
+        // window.scrollTo(0, 0);
         
     }, [page]);
 
     return(
         <div className="movieinfo">
             {/* Find your favorite movies to watch */}
-            <div>
-            Data provided for free by the <a href="http://www.omdbapi.com/">OMDb</a> API.
+            <div className="api-info">
+                Data provided for free by the <a href="http://www.omdbapi.com/">OMDb</a> API.
             </div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="queryInput"></label>
@@ -89,7 +89,6 @@ function MovieInfo() {
                 {
                     (page !== 1 && numPages !== 0) &&
                     <button className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Previous Page</button> /* &lt; */
-                    // &&
                 }
                 {
                     (page < numPages) &&

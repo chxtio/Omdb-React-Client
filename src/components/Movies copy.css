@@ -4,43 +4,31 @@
 }
 
 .moviesGrid {
-  /* display: flex; */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
-  /* grid-gap: 8.5rem; */
-  /* width: 100%; */
-  /* max-width: 1280px; */
-  /* max-width: 1500px; */
-  /* margin: 0 auto; */
-  /* margin-bottom: 6rem; */
-  margin-left: 30px;
+  display: flex;
+  /* flex-direction: row; */
 }
+
 
 .movieContainer {
     border-style: ridge;
     border-width: 5px;
     border-radius: 10px;
-    min-height: 530px; /* 420px; */
-    max-height: 530px;
-    /* height: 60px; */
+    min-height: 420px;
     margin: 20px auto 45px; 
-    /* margin: 20px 20px 45px 20px; */
     box-shadow: 10px 5px 5px rgb(12, 12, 121);
-    /* display: flex; */
-    /* justify-content: space-around; */
+    display: flex;
+    justify-content: space-around;
     /* flex-direction: row; */
   }
 
   .movieImage {
     box-shadow: 10px 5px 5px black;
-    /* height: 60px; */
   }
 
   .movieBody {
-      font-size: 10px;
-      /* overflow-wrap: break-word; */
+      overflow-wrap: break-word;
       /* color: blue; */
-      /* text-align: right; */
+      text-align: right;
   }
 
   .genreTags {
