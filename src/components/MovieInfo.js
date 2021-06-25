@@ -45,7 +45,7 @@ function MovieInfo() {
 
     return(
         <div className="movieinfo">
-            {/* Find your favorite movies to watch */}
+            
             <br/>
             <div className="api-info">
                 Data provided for free by the <a href="http://www.omdbapi.com/">OMDb</a> API.
@@ -58,8 +58,7 @@ function MovieInfo() {
                     placeholder="Enter movie title"
                     value={query}
                     type="text"
-                    onChange={e => setQuery(e.target.value)}
-                    />
+                    onChange={e => setQuery(e.target.value)}/>
                 <button className="search">Search</button>
             </form>
 

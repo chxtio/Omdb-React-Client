@@ -66,7 +66,7 @@ function Movies(props) {
                         id={id} 
                     >
 
-                        <Card.Img variant="top" src={movie.Poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : movie.Poster} className="movieImage" />
+                        <Card.Img variant="top" src={movie.Poster === 'N/A' ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_3eDodAmFjDPaM94OgKXswFEk9lGiClkR8A&usqp=CAU' : movie.Poster} className="movieImage" />
                         {/* </div> */}
                         <Card.Body className="cardBody">
                             <Card.Title><h2><b>{movie.Title}</b></h2></Card.Title>
@@ -80,7 +80,7 @@ function Movies(props) {
 
             <Modal show={show} centered>
                 <Card className="modalMovieContainer" style={{ width: '50rem' }}>
-                    <Card.Img variant="top" className="modalMovieImage" src={poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : poster}/> 
+                    <Card.Img variant="top" className="modalMovieImage" src={poster === 'N/A' ? 'https://nelowvision.com/wp-content/uploads/2018/11/Picture-Unavailable.jpg' : poster}/> 
                     <Card.Body className="modalMovieBody" style={{width: '23rem'}}>
                         <Card.Title><h1><b>{Title}</b></h1></Card.Title>
                         <Card.Text className="movieType">
