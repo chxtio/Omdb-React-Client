@@ -4,30 +4,13 @@
 }
 
 .moviesGrid {
-  /* display: flex; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  /* grid-gap: 8.5rem; */
-  /* width: 100%; */
-  /* max-width: 1280px; */
-  /* max-width: 1500px; */
-  /* margin: 0 auto; */
-  /* margin-bottom: 6rem; */
   margin-left: 10px;
   margin-top: 20px;
 }
 
-@media (max-width: 28.75rem) { /* 28.75rem */
-  .moviesGrid {
-    /* margin: 0 auto; */
-    /* display: flex; */
-    /* flex-direction: column; */
-  }
-  .movieContainer {
-    /* max-width: 300px; */
-    /* display: flex;
-    flex-direction: column; */
-  }
+@media (max-width: 28.75rem) { 
   .card {
     margin: 0 auto;
   }
@@ -48,9 +31,6 @@
     margin: 20px auto 45px; 
     /* margin: 20px 20px 45px 20px; */
     box-shadow: 10px 5px 5px rgb(12, 12, 121);
-    /* display: flex; */
-    /* justify-content: space-around; */
-    /* flex-direction: row; */
   }
 
   .movieContainer:hover {
@@ -69,9 +49,6 @@
 
   .movieBody {
       font-size: 10px;
-      /* overflow-wrap: break-word; */
-      /* color: blue; */
-      /* text-align: right; */
   }
 
   .cardBody h2 {
@@ -79,10 +56,6 @@
   }
 
   .genreTags {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto; */
     width: 100%;
   }
 
@@ -121,17 +94,6 @@ td, th {
   width: 100%;
   width: 100%;
 }
-
-/* .modal-content {
-  margin: 8% auto;
-
-
-  width: 45rem;
-  height: 25rem;
-  padding: 20px;
-  border: 1px solid #888;
-  box-shadow: 10px 5px 5px rgb(12, 12, 121);
-} */
   
 .modalMovieContainer {
   border-style: ridge;
@@ -152,9 +114,6 @@ td, th {
   box-shadow: 10px 5px 5px black;
   margin-top: 25px;
   margin-bottom: 25px;
-  /* style={{width: '22rem', height: '32rem'}} */
-  /* width: 100%; */
-  /* height: auto; */
 }
 
 .modalMovieBody {
@@ -178,17 +137,12 @@ td, th {
 
 
 @media (max-width: 28.75rem) {
-  .modal {
-    /* position: absolute; */
-    /* height: 10rem; */
-    /* height: 50%; */
-  }
   .modalMovieContainer {
     flex-direction: column;
     width: 17.5rem; 
-    /* height: 702rem; */
-    /* justify-content: center; */
     height: 46rem;
+    max-height: 100vh;
+    overflow-y: auto;
     margin: 0 auto;
   }
 
