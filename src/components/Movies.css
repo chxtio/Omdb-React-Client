@@ -64,6 +64,7 @@
     /* height: 60px; */
     max-width: 100%;
     /* height: auto; */
+    max-height: 26rem;
   }
 
   .movieBody {
@@ -71,6 +72,10 @@
       /* overflow-wrap: break-word; */
       /* color: blue; */
       /* text-align: right; */
+  }
+
+  .cardBody h2 {
+    margin: 10px auto 0 auto;
   }
 
   .genreTags {
@@ -146,6 +151,7 @@ td, th {
 .modalMovieImage {
   box-shadow: 10px 5px 5px black;
   margin-top: 25px;
+  margin-bottom: 25px;
   /* style={{width: '22rem', height: '32rem'}} */
   /* width: 100%; */
   /* height: auto; */
@@ -182,20 +188,20 @@ td, th {
     width: 17.5rem; 
     /* height: 702rem; */
     /* justify-content: center; */
-    height: 45rem;
-    /* margin: 0 auto; */
+    height: 46rem;
+    margin: 0 auto;
   }
 
   .modalMovieImage {
     width: 15rem;
-    height: 15rem;
+    height: 21rem;
     /* margin: 20px 10px 0 60px; */
-    margin: 5px 10px 0 80px;
+    margin: 15px 10px 0 80px;
   }
 
   .modalMovieBody {
     width: 17.5rem;
-    /* height: 10rem; */
+    /* height: 20rem; */
     font-size: 12px;
     text-align: center;
     /* margin: 0 auto; */

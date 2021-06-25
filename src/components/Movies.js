@@ -68,9 +68,9 @@ function Movies(props) {
 
                         <Card.Img variant="top" src={movie.Poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : movie.Poster} className="movieImage" />
                         {/* </div> */}
-                        <Card.Body >
+                        <Card.Body className="cardBody">
                             <Card.Title><h2><b>{movie.Title}</b></h2></Card.Title>
-                            <Card.Text><h2>{movie.Year}</h2></Card.Text>
+                            <Card.Text style={{margin: 5}}><b>{movie.Year}</b></Card.Text>
                         </Card.Body>
                     </div>
                     </Card>
