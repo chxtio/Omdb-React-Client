@@ -69,7 +69,7 @@ function Movies(props) {
                         <Card.Img variant="top" src={movie.Poster === 'N/A' ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_3eDodAmFjDPaM94OgKXswFEk9lGiClkR8A&usqp=CAU' : movie.Poster} className="movieImage" />
                         {/* </div> */}
                         <Card.Body className="cardBody">
-                            <Card.Title><h2><b>{movie.Title}</b></h2></Card.Title>
+                            <Card.Title><h3><b>{movie.Title}</b></h3></Card.Title>
                             <Card.Text style={{margin: 5}}><b>{movie.Year}</b></Card.Text>
                         </Card.Body>
                     </div>
