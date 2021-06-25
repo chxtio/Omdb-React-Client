@@ -46,9 +46,11 @@ function MovieInfo() {
     return(
         <div className="movieinfo">
             {/* Find your favorite movies to watch */}
+            <br/>
             <div className="api-info">
                 Data provided for free by the <a href="http://www.omdbapi.com/">OMDb</a> API.
             </div>
+            <br/>
             <form onSubmit={handleSubmit} >
                 <label htmlFor="queryInput"></label>
                 <input
@@ -61,7 +63,20 @@ function MovieInfo() {
                 <button className="search">Search</button>
             </form>
 
-
+            <div className="navigationBtns">
+                {
+                    (page !== 1 && numPages !== 0) &&
+                    <button id="topLeftBtn" className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Prev</button> /* &lt; */
+                }
+                                {
+                    (numPages !== 0) &&
+                    <p>Showing <b>{totalResults} results</b> over {numPages} pages | Page: <b>{page}</b></p>
+                }
+                {
+                    (page < numPages) &&
+                    <button id="topRightBtn" className="nextBtn" onClick= {() => setPage(page+1)}> Next &gt; </button> /*<i class="material-icons">arrow_forward_ios</i> */
+                }
+            </div>
 
 
                 {showMovies ? <Movies movies={movies}></Movies> : <></>}
@@ -77,11 +92,11 @@ function MovieInfo() {
             <div className="navigationBtns">
                 {
                     (page !== 1 && numPages !== 0) &&
-                    <button className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Previous Page</button> /* &lt; */
+                    <button className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Prev</button> /* &lt; */
                 }
                 {
                     (page < numPages) &&
-                    <button className="nextBtn" onClick= {() => setPage(page+1)}> Next Page &gt; </button> /*<i class="material-icons">arrow_forward_ios</i> */
+                    <button className="nextBtn" onClick= {() => setPage(page+1)}> Next &gt; </button> /*<i class="material-icons">arrow_forward_ios</i> */
                 }
             </div>
         </div>

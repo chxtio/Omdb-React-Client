@@ -35,7 +35,7 @@ code {
   border: 2px solid #e17b77;
   color: #fff;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 100;
   padding: 10px 14px;
   letter-spacing: .5px;
@@ -64,4 +64,9 @@ code {
 button:hover {
   background-color: white;
   color:green;
+}
+
+#topLeftBtn, #topRightBtn {
+  font-size: 10px;
+  margin: 0 10px;
 }
