@@ -60,20 +60,7 @@ function MovieInfo() {
                     />
                 <button className="search">Search</button>
             </form>
-            <div className="navigationBtns">
-                {
-                    (page !== 1 && numPages !== 0) &&
-                    <button className="prevBtn" onClick= {() => setPage(page-1)}>  &lt; Previous Page</button> /* &lt; */
-                }
-                                {
-                    (numPages !== 0) &&
-                    <p>Showing <b>{totalResults} results</b> over {numPages} pages | Page: <b>{page}</b></p>
-                }
-                {
-                    (page < numPages) &&
-                    <button className="nextBtn" onClick= {() => setPage(page+1)}> Next Page &gt; </button> /*<i class="material-icons">arrow_forward_ios</i> */
-                }
-            </div>
+
 
 
 
