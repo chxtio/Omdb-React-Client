@@ -9,7 +9,7 @@ function Movies(props) {
     const [poster, setPoster] = useState("");
     const [type, setType] = useState("");
     const [released, setReleased] = useState("");
-    const [genre, setGenre] = useState([]);
+    const [genre, setGenre] = useState("");
     const [runtime, setRuntime] = useState("");
     const [imdbRating, setRating] = useState(0);
     const [plot, setPlot] = useState("");
@@ -59,14 +59,14 @@ function Movies(props) {
 
                 return (
                     
-                    <Card style={{ width: '17.5rem' }} > 
+                    <Card className="card"> 
                     <div className="movieContainer" onClick = {(e) => {
                         handleShow(e.currentTarget);
                         }} 
                         id={id} 
                     >
 
-                        <Card.Img style={{ width: '17rem', height: '23rem' }} variant="top" src={movie.Poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : movie.Poster} className="movieImage" />
+                        <Card.Img variant="top" src={movie.Poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : movie.Poster} className="movieImage" />
                         {/* </div> */}
                         <Card.Body >
                             <Card.Title><h2><b>{movie.Title}</b></h2></Card.Title>
@@ -79,23 +79,19 @@ function Movies(props) {
             })}
 
             <Modal show={show} centered>
-                <Card className="modalMovieContainer" style={{ width: '50rem', height: '40rem' }}>
-                    <Card.Img variant="top" style={{width: '22rem', height: '32rem'}} className="modalMovieImage" src={poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : poster}/> 
+                <Card className="modalMovieContainer" style={{ width: '50rem' }}>
+                    <Card.Img variant="top" className="modalMovieImage" src={poster === 'N/A' ? 'https://placehold.it/198x264&text=Image+Not+Found' : poster}/> 
                     <Card.Body className="modalMovieBody" style={{width: '23rem'}}>
                         <Card.Title><h1><b>{Title}</b></h1></Card.Title>
                         <Card.Text className="movieType">
                             {type}
                         </Card.Text>
-                        {/* <div className="movieRelease"> */}
                         <Card.Text className="movieRelease">
                             Release Date: {released}
                         </Card.Text>
-                        {/* </div> */}
-                            {/* <div className="genreTags"> */}
-                        {/* <Card.Text className="genreTags">
+                        <Card.Text className="genreTags">
                             {genre && genre.split(', ').map(g => <span>{g}</span>)}
-                        </Card.Text> */}
-                            {/* </div> */}
+                        </Card.Text>
                         <Card.Text>
                             Runtime: {runtime}
                         </Card.Text>
@@ -110,9 +106,6 @@ function Movies(props) {
                         </Card.Text>
                         <Button className="modalBtn" variant="primary" onClick = {handleClose}>Close</Button >
                     </Card.Body>
-                    {/* <Card.Footer>
-                        <Button variant="primary" onClick = {handleClose}>Close</Button>
-                    </Card.Footer> */}
                 </Card>
             </Modal>
 

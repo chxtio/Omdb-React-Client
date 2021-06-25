@@ -13,3 +13,8 @@
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.material-icons:hover {
+    transform: scale(1.5);
+    transform: rotate(45deg);
+}
